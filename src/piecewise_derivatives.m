@@ -1,7 +1,14 @@
 function z_punto = piecewise_derivatives(t,z)
 global gv
 
-t
+% print time every 0.01 seconds
+if(t == 0)
+gv.timeCheck = 0;
+end
+if(t > gv.timeCheck) 
+    gv.timeCheck = gv.timeCheck + 0.01;
+    disp(t);   
+end
 
 % global variable
 L           =gv.L;
